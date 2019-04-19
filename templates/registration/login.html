@@ -3,11 +3,11 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
-
+{% load crispy_forms_tags %}
 <h2>Login</h2>
 <form method="post">
   {% csrf_token %}
-  {{ form.as_p }}
+  {{ form|crispy}}
   <button type="submit">Login</button>
   <p><a href="{% url 'signup' %}">Signup</a></p>
 </form>
