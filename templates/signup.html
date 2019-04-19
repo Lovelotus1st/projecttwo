@@ -5,6 +5,12 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+
+    <h2 class="text-center">Login</h2>
+
   <h2>Sign up</h2>
   <form method="post">
     {% csrf_token %}
@@ -12,4 +18,6 @@
     <button type="submit">Sign up</button>
       <p>Already have account?   <a href="{% url 'login' %}">login</a> </p>
   </form>
+
+  </div>
 {% endblock %}
